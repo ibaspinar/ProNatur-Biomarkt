@@ -151,9 +151,9 @@
             this.btnProductSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductSave.ForeColor = System.Drawing.Color.White;
-            this.btnProductSave.Location = new System.Drawing.Point(637, 12);
+            this.btnProductSave.Location = new System.Drawing.Point(609, 12);
             this.btnProductSave.Name = "btnProductSave";
-            this.btnProductSave.Size = new System.Drawing.Size(127, 31);
+            this.btnProductSave.Size = new System.Drawing.Size(155, 31);
             this.btnProductSave.TabIndex = 9;
             this.btnProductSave.Text = "Speichern";
             this.btnProductSave.UseVisualStyleBackColor = false;
@@ -165,9 +165,9 @@
             this.btnProductClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductClear.ForeColor = System.Drawing.Color.White;
-            this.btnProductClear.Location = new System.Drawing.Point(637, 58);
+            this.btnProductClear.Location = new System.Drawing.Point(609, 58);
             this.btnProductClear.Name = "btnProductClear";
-            this.btnProductClear.Size = new System.Drawing.Size(127, 31);
+            this.btnProductClear.Size = new System.Drawing.Size(155, 31);
             this.btnProductClear.TabIndex = 11;
             this.btnProductClear.Text = "Felder Leeren";
             this.btnProductClear.UseVisualStyleBackColor = false;
@@ -181,7 +181,7 @@
             this.btnProductDelete.ForeColor = System.Drawing.Color.White;
             this.btnProductDelete.Location = new System.Drawing.Point(789, 58);
             this.btnProductDelete.Name = "btnProductDelete";
-            this.btnProductDelete.Size = new System.Drawing.Size(127, 31);
+            this.btnProductDelete.Size = new System.Drawing.Size(155, 31);
             this.btnProductDelete.TabIndex = 12;
             this.btnProductDelete.Text = "Löschen";
             this.btnProductDelete.UseVisualStyleBackColor = false;
@@ -213,9 +213,9 @@
             this.btnProductEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductEdit.ForeColor = System.Drawing.Color.White;
-            this.btnProductEdit.Location = new System.Drawing.Point(789, 12);
+            this.btnProductEdit.Location = new System.Drawing.Point(789, 9);
             this.btnProductEdit.Name = "btnProductEdit";
-            this.btnProductEdit.Size = new System.Drawing.Size(127, 31);
+            this.btnProductEdit.Size = new System.Drawing.Size(155, 31);
             this.btnProductEdit.TabIndex = 10;
             this.btnProductEdit.Text = "Bearbeiten";
             this.btnProductEdit.UseVisualStyleBackColor = false;
