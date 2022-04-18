@@ -89,5 +89,6 @@ namespace ProNatur_Biomarkt_GmbH
             comboBoxProductCategory.Text = "";
             comboBoxProductCategory.SelectedItem = null;
         }
+
     }
 }
