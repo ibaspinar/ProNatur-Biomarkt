@@ -17,47 +17,7 @@ namespace ProNatur_Biomarkt_GmbH
         public ProductScreen()
         {
             InitializeComponent();
-            ShowProducts();
-        }
 
-        private void btnProductSave_Click(object sender, EventArgs e)
-        {
-            KontrolliereObLeerFeld();
-            // save product name in database
-            string productName = textBoxProductName.Text;
-            string productBrand = textBoxProductBrand.Text;
-            string productCategory = comboBoxProductCategory.Text;
-            string productPrice = textBoxProductPrice.Text;
-
-            databaseConnection.Open();
-            string query = string.Format("Insert into Products values('{0}', '{1}', '{2}', '{3}'", productName, productBrand, productCategory, productPrice);
-            SqlCommand sqlCommand = new SqlCommand(query, databaseConnection);
-            sqlCommand.ExecuteNonQuery();
-            databaseConnection.Close();
-
-            ClearAllFields();
-            ShowProducts();
-        }
-
-        private void btnProductEdit_Click(object sender, EventArgs e)
-        {
-
-            ShowProducts();
-        }
-
-        private void btnProductClear_Click(object sender, EventArgs e)
-        {
-            ClearAllFields();
-        }
-
-        private void btnProductDelete_Click(object sender, EventArgs e)
-        {
-
-            ShowProducts();
-        }
-
-        private void ShowProducts()
-        {
             // Start
             databaseConnection.Open();
 
@@ -75,21 +35,24 @@ namespace ProNatur_Biomarkt_GmbH
             databaseConnection.Close();
         }
 
-        private void ClearAllFields()
+        private void btnProductSave_Click(object sender, EventArgs e)
         {
-            textBoxProductName.Text = "";
-            textBoxProductBrand.Text = "";
-            textBoxProductPrice.Text = "";
-            comboBoxProductCategory.SelectedItem = null;
+            string productName = textBoxProductName.Text;
         }
 
-        private void KontrolliereObLeerFeld()
+        private void btnProductEdit_Click(object sender, EventArgs e)
         {
-            if (textBoxProductName.Text == "" || textBoxProductBrand.Text == "" || comboBoxProductCategory.Text == "" || textBoxProductPrice.Text == "")
-            {
-                MessageBox.Show("Bitte fülle alle Werte aus!");
-                return;
-            }
+
+        }
+
+        private void btnProductClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProductDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
