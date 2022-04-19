@@ -24,5 +24,13 @@ namespace ProNatur_Biomarkt_GmbH
 
             this.Hide();
         }
+
+        private void btnRechnung_Click(object sender, EventArgs e)
+        {
+            InvoiceScreen invoiceScreen = new InvoiceScreen();
+            invoiceScreen.Show();
+
+            this.Hide();
+        }
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InvoiceScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceScreen.Designer.cs">
+      <DependentUpon>InvoiceScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InvoiceScreen.resx">
+      <DependentUpon>InvoiceScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoadingScreen.resx">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
     </EmbeddedResource>

@@ -57,6 +57,7 @@
             this.btnRechnung.TabIndex = 1;
             this.btnRechnung.Text = "Rechnung erstellen";
             this.btnRechnung.UseVisualStyleBackColor = true;
+            this.btnRechnung.Click += new System.EventHandler(this.btnRechnung_Click);
             // 
             // MainMenuScreen
             // 
