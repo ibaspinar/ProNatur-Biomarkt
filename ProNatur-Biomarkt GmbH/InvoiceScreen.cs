@@ -136,5 +136,11 @@ namespace ProNatur_Biomarkt_GmbH
 
             lastSelectedInvoiceKey = (int)invoiceDGV.SelectedRows[0].Cells[0].Value;
         }
+
+        // Gesamtsumme berechnen
+        private void GesamtsummeEinnahmen()
+        {
+
+        }
     }
 }
