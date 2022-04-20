@@ -126,6 +126,7 @@ namespace ProNatur_Biomarkt_GmbH
             comboBoxInvoiceCategory.SelectedItem = null;
         }
 
+        // Noch einzustellen bei Eigenschaften unter DataGridView -> MultiSelect = False / SelectionMode = FullRowSelect / ReadOnly = True
         private void invoiceDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxInvoiceName.Text = invoiceDGV.SelectedRows[0].Cells[1].Value.ToString();
