@@ -212,14 +212,18 @@
             this.invoiceDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.invoiceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.invoiceDGV.Location = new System.Drawing.Point(12, 179);
+            this.invoiceDGV.MultiSelect = false;
             this.invoiceDGV.Name = "invoiceDGV";
+            this.invoiceDGV.ReadOnly = true;
             this.invoiceDGV.RowHeadersVisible = false;
             this.invoiceDGV.RowHeadersWidth = 51;
             this.invoiceDGV.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.invoiceDGV.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
             this.invoiceDGV.RowTemplate.Height = 24;
+            this.invoiceDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.invoiceDGV.Size = new System.Drawing.Size(1290, 612);
             this.invoiceDGV.TabIndex = 12;
+            this.invoiceDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoiceDGV_CellContentClick);
             // 
             // InvoiceScreen
             // 

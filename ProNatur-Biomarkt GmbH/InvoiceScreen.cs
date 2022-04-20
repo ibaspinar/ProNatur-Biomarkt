@@ -15,7 +15,7 @@ namespace ProNatur_Biomarkt_GmbH
     {
         private SqlConnection databaseConnection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\Anwender\Documents\ProNatur Biomarkt GmbH.mdf;Integrated Security = True; Connect Timeout = 30");
 
-        private int lastSelectedProductKey;
+        private int lastSelectedInvoiceKey;
 
         public InvoiceScreen()
         {
@@ -49,7 +49,7 @@ namespace ProNatur_Biomarkt_GmbH
 
         private void btnInvoiceEdit_Click(object sender, EventArgs e)
         {
-            if (lastSelectedProductKey == 0)
+            if (lastSelectedInvoiceKey == 0)
             {
                 MessageBox.Show("Bitte wähle erst ein Produkt aus.");
                 return;
@@ -61,10 +61,9 @@ namespace ProNatur_Biomarkt_GmbH
             string invoicePrice = textBoxInvoicePrice.Text;
 
             string query = string.Format("update Invoice set Empfänger='{0}', Produkt='{1}', Kategorie='{2}', Gesamtpreis='{3}' where Id={4}"
-                , invoiceName, invoiceProduct, invoiceCategory, invoicePrice, lastSelectedProductKey);
+                , invoiceName, invoiceProduct, invoiceCategory, invoicePrice, lastSelectedInvoiceKey);
 
             ExecuteQuery(query);
-
             ShowInvoice();
         }
 
@@ -75,6 +74,14 @@ namespace ProNatur_Biomarkt_GmbH
 
         private void btnInvoiceDelete_Click(object sender, EventArgs e)
         {
+            if (lastSelectedInvoiceKey == 0)
+            {
+                MessageBox.Show("Bitte wähle erst ein Produkt aus.");
+                return;
+            }
+
+            string query = string.Format("delete from Invoice where Id={0}", lastSelectedInvoiceKey);
+            ExecuteQuery(query);
 
             ClearFelder();
             ShowInvoice();
@@ -117,6 +124,16 @@ namespace ProNatur_Biomarkt_GmbH
             comboBoxInvoiceCategory.Text = "";
             textBoxInvoicePrice.Text = "";
             comboBoxInvoiceCategory.SelectedItem = null;
+        }
+
+        private void invoiceDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxInvoiceName.Text = invoiceDGV.SelectedRows[0].Cells[1].Value.ToString();
+            textBoxInvoiceProduct.Text = invoiceDGV.SelectedRows[0].Cells[2].Value.ToString();
+            comboBoxInvoiceCategory.Text = invoiceDGV.SelectedRows[0].Cells[3].Value.ToString();
+            textBoxInvoicePrice.Text = invoiceDGV.SelectedRows[0].Cells[4].Value.ToString();
+
+            lastSelectedInvoiceKey = (int)invoiceDGV.SelectedRows[0].Cells[0].Value;
         }
     }
 }
